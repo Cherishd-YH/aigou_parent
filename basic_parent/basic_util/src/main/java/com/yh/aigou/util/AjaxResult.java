@@ -1,5 +1,8 @@
 package com.yh.aigou.util;
 
+/**
+ * AjaxResult
+ */
 public class AjaxResult {
     private Boolean success=true;
     private String message="操作成功";
