@@ -1,0 +1,20 @@
+server:
+  port: 9527
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+  instance:
+    instance-id:  gateway-9527.com
+    prefer-ip-address: false
+
+spring:
+  application:
+    name: zuul-gateway
+zuul:
+  routes:
+    myuser.serviceId: aigou-plat #这是调用满足条件的服务名
+    myuser.path: /plat/**
+  ignored-services: "*"
+  prefix: "/services"  #这是所有路径的前缀

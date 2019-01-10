@@ -1,0 +1,14 @@
+server:
+  port: 8001
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+  instance:
+    instance-id:  plat-services-8001.com
+    prefer-ip-address: false
+
+spring:
+  application:
+    name: aigou-plat
